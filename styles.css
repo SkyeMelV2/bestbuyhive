@@ -43,7 +43,7 @@
 .logo-container {
     display: flex;
     align-items: center;
-    gap: 0;  /* Remove gap between image and text */
+    gap: 0;
     margin-left: calc(-4vw - 40px);
     padding-left: 0;
     transition: all 0.3s ease;
@@ -51,13 +51,18 @@
 
 .logo {
     display: flex;
-    flex-direction: column;  /* Stack text vertically */
-    align-items: flex-start;  /* Align text to left */
-    gap: 2px;  /* Minimal space between lines */
-    margin-left: -10px;  /* Pull closer to logo */
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;  /* Reduced from 2px */
+    margin-left: -25px;  /* Increased negative margin to move closer to image */
     padding: 4px 8px;
     border: 1px solid var(--border-color);
-    line-height: 1;  /* Remove extra line spacing */
+    line-height: 0.9;  /* Reduced line height for tighter stacking */
+}
+
+/* Add hover effect for smooth transition */
+.logo:hover {
+    margin-left: -20px;
 }
 
 .logo span {
@@ -127,8 +132,8 @@
     }
     
     .logo {
+        margin-left: -15px;  /* Adjusted for mobile */
         padding: 2px 6px;
-        margin-left: -5px;
     }
     
     .logo .top { font-size: 16px; }
