@@ -43,8 +43,8 @@
 .logo-container {
     display: flex;
     align-items: center;
-    gap: calc(1vw + 10px);
-    margin-left: calc(-2vw - 30px);
+    gap: calc(1vw + -10px);
+    margin-left: calc(-2vw - 15px);
     padding-left: 0;
     transition: all 0.3s ease;
 }
@@ -72,7 +72,7 @@
 .logo .bottom { font-size: 17.6px; }
 
 .logo-image {
-    width: 300px;
+    width: 350px;
     height: 100px;
     object-fit: contain;
     border-radius: 4px;
