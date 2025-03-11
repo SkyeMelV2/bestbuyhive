@@ -47,31 +47,36 @@
 }
 
 .logo {
-    font-size: 2 rem;
+    font-size: 2rem;
     font-weight: 700;
     padding: 0.8rem;
     border: 1px solid var(--border-color);
     display: flex;
     flex-direction: column;
     align-items: center;
-    line-height: 2.2;
+    line-height: 1;  /* Reduced from 2.2 to remove spacing */
     text-align: center;
 }
 
 .logo span {
     display: block;
+    margin: 0;  /* Remove any default margins */
+    padding: 0;  /* Remove any default padding */
 }
 
 .logo .top {
     font-size: 1.2rem;
+    line-height: 1;
 }
 
 .logo .middle {
     font-size: 1rem;
+    line-height: 1;
 }
 
 .logo .bottom {
     font-size: 1.1rem;
+    line-height: 1;
 }
 
 .logo-image {
