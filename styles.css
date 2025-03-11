@@ -80,8 +80,8 @@
 }
 
 .logo-image {
-    width: 150px;  /* Increased width for rectangular shape */
-    height: 75px;  /* Reduced height for rectangular shape */
+    width: 300px;  /* Increased width for rectangular shape */
+    height: 150px;  /* Reduced height for rectangular shape */
     object-fit: contain;
     border-radius: 4px;  /* Slight rounding of corners */
     background: var(--accent-color);
