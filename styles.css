@@ -50,12 +50,13 @@
 }
 
 .logo-image {
-    width: 50px;  /* Logo width */
-    height: 45px; /* Logo height */
+    width: 120px;  /* Increased width for rectangular shape */
+    height: 60px;  /* Reduced height for rectangular shape */
     object-fit: contain;
-    border-radius: 50%;
+    border-radius: 4px;  /* Slight rounding of corners */
     background: var(--accent-color);
-    padding: 5px;
+    padding: 8px;
+    border: 1px solid var(--border-color);
 }
 
 .logo {
@@ -87,7 +88,7 @@
     }
     
     .logo-image {
-        width: 35px;
-        height: 35px;
+        width: 100px;
+        height: 50px;
     }
 }
