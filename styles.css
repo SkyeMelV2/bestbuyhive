@@ -3,9 +3,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 80px 8%;  /* Changed from 5rem */
-    gap: 64px;  /* Changed from 4rem */
-    background: linear-gradient(to bottom, #add8e6, #87ceeb); /* Light blue gradient */
+    padding: 80px 8%;
+    gap: 64px;
+    background: linear-gradient(to bottom, #add8e6, #87ceeb);
     min-height: 80vh;
 }
 
@@ -15,18 +15,18 @@
 }
 
 .hero h1 {
-    font-size: 56px;  /* Changed from 3.5rem */
+    font-size: 56px;
     font-weight: 700;
     line-height: 1.2;
-    margin-bottom: 24px;  /* Changed from 1.5rem */
+    margin-bottom: 24px;
     color: var(--primary-color);
     text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
 }
 
 .hero-description {
-    font-size: 17.6px;  /* Changed from 1.1rem */
+    font-size: 17.6px;
     color: #333;
-    margin-bottom: 32px;  /* Changed from 2rem */
+    margin-bottom: 32px;
     line-height: 1.6;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
@@ -35,7 +35,7 @@
     color: var(--primary-color);
     font-weight: 600;
     letter-spacing: 3px;
-    margin-bottom: 24px;  /* Changed from 1.5rem */
+    margin-bottom: 24px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
@@ -43,79 +43,82 @@
 .logo-container {
     display: flex;
     align-items: center;
-    gap: 15px;  /* Changed from 1rem */
-    margin-left: -20px;  /* Push logo further left */
-    padding-left: 0;     /* Remove any padding */
+    gap: calc(1vw + 10px);
+    margin-left: calc(-2vw - 30px);
+    padding-left: 0;
+    transition: all 0.3s ease;
 }
 
 .logo {
-    font-size: 32px;  /* Changed from 2rem */
+    font-size: 32px;
     font-weight: 700;
-    padding: 12.8px;  /* Changed from 0.8rem */
+    padding: 12.8px;
     border: 1px solid var(--border-color);
     display: flex;
     flex-direction: column;
     align-items: center;
-    line-height: 1;  /* Reduced from 2.2 to remove spacing */
+    line-height: 1;
     text-align: center;
 }
 
 .logo span {
     display: block;
-    margin: 0;  /* Remove any default margins */
-    padding: 0;  /* Remove any default padding */
+    margin: 0;
+    padding: 0;
 }
 
-.logo .top {
-    font-size: 19.2px;  /* Changed from 1.2rem */
-    line-height: 1;
-}
-
-.logo .middle {
-    font-size: 16px;  /* Changed from 1rem */
-    line-height: 1;
-}
-
-.logo .bottom {
-    font-size: 17.6px;  /* Changed from 1.1rem */
-    line-height: 1;
-}
+.logo .top { font-size: 19.2px; }
+.logo .middle { font-size: 16px; }
+.logo .bottom { font-size: 17.6px; }
 
 .logo-image {
-    width: 300px;  /* Increased width for rectangular shape */
-    height: 100px;  /* Reduced height for rectangular shape */
+    width: 300px;
+    height: 100px;
     object-fit: contain;
-    border-radius: 4px;  /* Slight rounding of corners */
+    border-radius: 4px;
     background: var(--accent-color);
     padding: 8px;
     border: 1px solid var(--border-color);
-    margin-left: 0;      /* Remove any margin */
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1200px) {
+    .logo-container {
+        margin-left: calc(-1.5vw - 25px);
+        gap: calc(0.8vw + 8px);
+    }
+}
+
+@media (max-width: 992px) {
+    .logo-container {
+        margin-left: calc(-1vw - 20px);
+        gap: calc(0.6vw + 6px);
+    }
 }
 
 @media (max-width: 768px) {
     .hero {
-        padding: 64px 5%;  /* Changed from 4rem */
+        padding: 64px 5%;
         text-align: center;
         background-attachment: scroll;
     }
 
-    .hero h1 {
-        font-size: 2.5rem;
-    }
+    .hero h1 { font-size: 40px; }
+    
+    .buttons { justify-content: center; }
 
-    .buttons {
-        justify-content: center;
-    }
-
-    /* Responsive Logo */
     .logo-container {
         flex-direction: column;
-        gap: 8px;  /* Changed from 0.5rem */
-        margin-left: 0;  /* Reset margin for mobile */
+        margin-left: 0;
+        gap: calc(0.5vw + 5px);
     }
     
     .logo-image {
         width: 100px;
         height: 50px;
     }
+}
+
+@media (max-width: 480px) {
+    .logo-container { gap: calc(0.3vw + 3px); }
 }
