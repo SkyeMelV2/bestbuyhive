@@ -1,3 +1,4 @@
+// filepath: d:\Project BestBuyHive\.gitignore
 .DS_Store
 node_modules/
 .env
