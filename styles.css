@@ -50,26 +50,25 @@
 }
 
 .logo {
-    font-size: 32px;
+    font-size: 24px;  /* Reduced from 32px */
     font-weight: 700;
-    padding: 12.8px;
+    padding: 8px 16px;  /* Adjusted padding */
     border: 1px solid var(--border-color);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    line-height: 1;
-    text-align: center;
+    display: inline-flex;  /* Changed to inline-flex */
+    align-items: center;  /* Center vertically */
+    gap: 8px;  /* Space between text elements */
+    margin-left: -20px;  /* Pull closer to logo */
 }
 
 .logo span {
-    display: block;
+    display: inline-block;  /* Changed from block */
     margin: 0;
-    padding: 0;
+    padding: 0 4px;  /* Added horizontal padding */
 }
 
-.logo .top { font-size: 19.2px; }
-.logo .middle { font-size: 16px; }
-.logo .bottom { font-size: 17.6px; }
+.logo .top { font-size: 16px; }
+.logo .middle { font-size: 14px; }
+.logo .bottom { font-size: 15px; }
 
 .logo-image {
     width: 350px;
@@ -108,9 +107,15 @@
     .buttons { justify-content: center; }
 
     .logo-container {
-        flex-direction: column;
+        flex-direction: row;  /* Keep horizontal on mobile */
+        justify-content: flex-start;
         margin-left: 0;
-        gap: calc(0.5vw + 5px);
+        gap: 8px;
+    }
+    
+    .logo {
+        margin-left: 0;
+        padding: 4px 8px;
     }
     
     .logo-image {
