@@ -50,8 +50,8 @@
 }
 
 .logo-image {
-    width: 40px;  /* Logo width */
-    height: 40px; /* Logo height */
+    width: 50px;  /* Logo width */
+    height: 45px; /* Logo height */
     object-fit: contain;
     border-radius: 50%;
     background: var(--accent-color);
