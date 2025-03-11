@@ -1,4 +1,4 @@
- BestBuyHive\products.html
+products.html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,10 +7,197 @@
     <title>Products - Best Buy Hive</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+    <script src="https://kit.fontawesome.com/1dca7cb640.js" crossorigin="anonymous"></script>
+    <meta name="description" content="Best Buy Hive Products - Discover our recommended products">
+    <meta name="keywords" content="products, shopping, deals, recommendations">
+    <meta name="author" content="Best Buy Hive">
+    <style>
+        /* Products Page Styles */
+        .products-section {
+            padding: 4rem 8%;
+        }
+
+        .products-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-color);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .product-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-image {
+            position: relative;
+            height: 200px;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .product-tag {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: #d4af37;
+            color: var(--primary-color);
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .product-content {
+            padding: 1.5rem;
+        }
+
+        .product-content h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+        }
+
+        .product-description {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            font-size: 0.875rem;
+        }
+
+        .product-price {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .current-price {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-color);
+        }
+
+        .original-price {
+            color: var(--text-secondary);
+            text-decoration: line-through;
+        }
+
+        @media (max-width: 768px) {
+            .products-section {
+                padding: 2rem 5%;
+            }
+            
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Filter and Sort Styles */
+        .filter-sort {
+            display: flex;
+            gap: 2rem;
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            flex-wrap: wrap;
+        }
+
+        .filter-group {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .filter-group label {
+            color: var(--text-color);
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .filter-select {
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--border-color);
+            background: transparent;
+            color: var(--text-color);
+            border-radius: 5px;
+            font-family: 'Poppins', sans-serif;
+            cursor: pointer;
+            min-width: 150px;
+        }
+
+        .filter-select option {
+            background: var(--primary-color);
+            color: var(--text-color);
+        }
+
+        .filter-select:focus {
+            outline: none;
+            border-color: var(--accent-color);
+        }
+
+        /* Active Filter Tags */
+        .active-filters {
+            display: flex;
+            gap: 1rem;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+        }
+
+        .filter-tag {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            font-size: 0.875rem;
+        }
+
+        .filter-tag button {
+            background: none;
+            border: none;
+            color: var(--accent-color);
+            cursor: pointer;
+            padding: 0;
+            font-size: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .filter-sort {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .filter-group {
+                width: 100%;
+            }
+
+            .filter-select {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
-<body>
+<body class="dark-theme">
     <header class="header">
-        <div class="logo">BEST BUY HIVE</div>
+        <div class="logo border">BEST BUY HIVE</div>
         <nav class="nav">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
@@ -19,39 +206,139 @@
             <a href="contact.html">Contact Us</a>
         </nav>
         <div class="actions">
-            <button class="btn">Get Started</button>
-            <div class="phone">📞</div>
+            <button class="btn btn-light">Get Started</button>
+            <div class="phone-icon">
+                <i class="fas fa-phone"></i>
+            </div>
         </div>
     </header>
 
     <main class="main-content">
-        <h1>Our Products</h1>
-        <div class="products-grid">
-            <!-- Add your product cards here -->
-        </div>
+        <section class="products-section">
+            <h1>Our Products</h1>
+            <p class="subtext">DISCOVER THE BEST DEALS</p>
+            
+            <!-- Add Filter and Sort Options -->
+            <div class="filter-sort">
+                <div class="filter-group">
+                    <label for="category">Category:</label>
+                    <select id="category" class="filter-select">
+                        <option value="all">All Categories</option>
+                        <option value="electronics">Electronics</option>
+                        <option value="fashion">Fashion</option>
+                        <option value="home">Home & Kitchen</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="price">Price Range:</label>
+                    <select id="price" class="filter-select">
+                        <option value="all">All Prices</option>
+                        <option value="0-50">$0 - $50</option>
+                        <option value="50-100">$50 - $100</option>
+                        <option value="100+">$100+</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="sort">Sort By:</label>
+                    <select id="sort" class="filter-select">
+                        <option value="featured">Featured</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="newest">Newest First</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="products-grid">
+                <div class="product-card" data-category="electronics" data-price="99.99" data-date="20250301">
+                    <div class="product-image">
+                        <img src="product1.jpg" alt="Product 1">
+                        <div class="product-tag">Best Deal</div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Product Name</h3>
+                        <p class="product-description">Short description of the product goes here...</p>
+                        <div class="product-price">
+                            <span class="current-price">$99.99</span>
+                            <span class="original-price">$129.99</span>
+                        </div>
+                        <button class="btn btn-light">Shop Now</button>
+                    </div>
+                </div>
+                <!-- Repeat product-card div for more products -->
+            </div>
+        </section>
     </main>
 
     <footer class="footer">
-        <div class="footer-section">
-            <div class="logo">BEST BUY HIVE</div>
-            <p>📞 +1 (555) 123-4567</p>
-            <p>📧 support@bestbuyhive.com</p>
-            <p>🌍 www.bestbuyhive.com</p>
-        </div>
-        <div class="footer-links">
-            <h3>QUICK LINKS</h3>
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="products.html">Products</a>
-            <a href="blog.html">Blog</a>
-            <a href="contact.html">Contact</a>
-        </div>
-        <div class="socials">
-            <a href="#">Facebook</a>
-            <a href="#">Twitter</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">Instagram</a>
-        </div>
+        // ...existing code...
     </footer>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Get filter elements
+        const categorySelect = document.getElementById('category');
+        const priceSelect = document.getElementById('price');
+        const sortSelect = document.getElementById('sort');
+
+        // Add event listeners
+        categorySelect.addEventListener('change', filterProducts);
+        priceSelect.addEventListener('change', filterProducts);
+        sortSelect.addEventListener('change', sortProducts);
+
+        function filterProducts() {
+            const category = categorySelect.value;
+            const priceRange = priceSelect.value;
+            
+            // Get all product cards
+            const products = document.querySelectorAll('.product-card');
+            
+            products.forEach(product => {
+                const productCategory = product.dataset.category;
+                const productPrice = parseFloat(product.dataset.price);
+                
+                let showProduct = true;
+                
+                // Apply category filter
+                if (category !== 'all' && productCategory !== category) {
+                    showProduct = false;
+                }
+                
+                // Apply price filter
+                if (priceRange !== 'all') {
+                    const [min, max] = priceRange.split('-').map(Number);
+                    if (max && (productPrice < min || productPrice > max)) {
+                        showProduct = false;
+                    } else if (!max && productPrice < min) {
+                        showProduct = false;
+                    }
+                }
+                
+                product.style.display = showProduct ? 'block' : 'none';
+            });
+        }
+
+        function sortProducts() {
+            const sortBy = sortSelect.value;
+            const productsGrid = document.querySelector('.products-grid');
+            const products = Array.from(document.querySelectorAll('.product-card'));
+            
+            products.sort((a, b) => {
+                switch(sortBy) {
+                    case 'price-low':
+                        return parseFloat(a.dataset.price) - parseFloat(b.dataset.price);
+                    case 'price-high':
+                        return parseFloat(b.dataset.price) - parseFloat(a.dataset.price);
+                    case 'newest':
+                        return parseFloat(b.dataset.date) - parseFloat(a.dataset.date);
+                    default:
+                        return 0;
+                }
+            });
+            
+            productsGrid.innerHTML = '';
+            products.forEach(product => productsGrid.appendChild(product));
+        }
+    });
+    </script>
 </body>
 </html>
