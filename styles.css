@@ -46,6 +46,34 @@
     gap: 1rem;
 }
 
+.logo {
+    font-size: 2.125rem;
+    font-weight: 700;
+    padding: 0.8rem;
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 2.2;
+    text-align: center;
+}
+
+.logo span {
+    display: block;
+}
+
+.logo .top {
+    font-size: 1.2rem;
+}
+
+.logo .middle {
+    font-size: 1rem;
+}
+
+.logo .bottom {
+    font-size: 1.1rem;
+}
+
 .logo-image {
     width: 120px;  /* Increased width for rectangular shape */
     height: 60px;  /* Reduced height for rectangular shape */
@@ -53,13 +81,6 @@
     border-radius: 4px;  /* Slight rounding of corners */
     background: var(--accent-color);
     padding: 8px;
-    border: 1px solid var(--border-color);
-}
-
-.logo {
-    font-size: 1.125rem;
-    font-weight: 700;
-    padding: 0.5rem 1rem;
     border: 1px solid var(--border-color);
 }
 
