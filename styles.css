@@ -44,6 +44,8 @@
     display: flex;
     align-items: center;
     gap: 15px;  /* Changed from 1rem */
+    margin-left: -20px;  /* Push logo further left */
+    padding-left: 0;     /* Remove any padding */
 }
 
 .logo {
@@ -87,6 +89,7 @@
     background: var(--accent-color);
     padding: 8px;
     border: 1px solid var(--border-color);
+    margin-left: 0;      /* Remove any margin */
 }
 
 @media (max-width: 768px) {
@@ -108,6 +111,7 @@
     .logo-container {
         flex-direction: column;
         gap: 8px;  /* Changed from 0.5rem */
+        margin-left: 0;  /* Reset margin for mobile */
     }
     
     .logo-image {
