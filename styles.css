@@ -214,7 +214,7 @@
     font-size: 48px;
     font-weight: 700;
     color: var(--text-color);
-    margin: 32px auto;
+    margin: 16px auto;    /* Reduced from 32px to move title higher */
     padding: 0 20px;
     max-width: 1200px;
     text-transform: uppercase;
@@ -224,6 +224,6 @@
 @media (max-width: 768px) {
     .main-title {
         font-size: 32px;
-        margin: 24px auto;
+        margin: 12px auto;  /* Reduced from 24px for mobile */
     }
 }
