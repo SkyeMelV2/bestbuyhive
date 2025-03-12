@@ -211,19 +211,28 @@
 
 .main-title {
     text-align: center;
-    font-size: 20px;
+    font-size: 48px;
     font-weight: 700;
     color: var(--text-color);
-    margin: -400px auto;    /* Reduced from 32px to move title higher */
+    margin: 16px auto;
     padding: 0 20px;
     max-width: 1200px;
     text-transform: uppercase;
     letter-spacing: 2px;
+    white-space: nowrap;  /* Prevent line breaks */
+    overflow: hidden;     /* Hide overflow */
+    text-overflow: ellipsis;  /* Show ... if text overflows */
 }
 
 @media (max-width: 768px) {
     .main-title {
-        font-size: 25px;
-        margin: 6px auto;  /* Reduced from 24px for mobile */
+        font-size: 24px;  /* Reduced font size for mobile */
+        margin: 12px auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 18px;  /* Even smaller for very small screens */
     }
 }
