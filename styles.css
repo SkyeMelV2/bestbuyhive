@@ -211,28 +211,13 @@
 
 .main-title {
     text-align: center;
-    font-size: 48px;
     font-weight: 700;
     color: var(--text-color);
     margin: 16px auto;
     padding: 0 20px;
-    max-width: 1200px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    white-space: nowrap;  /* Prevent line breaks */
-    overflow: hidden;     /* Hide overflow */
-    text-overflow: ellipsis;  /* Show ... if text overflows */
-}
-
-@media (max-width: 768px) {
-    .main-title {
-        font-size: 24px;  /* Reduced font size for mobile */
-        margin: 12px auto;
-    }
-}
-
-@media (max-width: 480px) {
-    .main-title {
-        font-size: 18px;  /* Even smaller for very small screens */
-    }
+    white-space: nowrap;  /* Keep on one line */
+    width: 100%;          /* Take full width */
+    font-size: clamp(16px, 4vw, 48px);  /* Fluid typography */
 }
