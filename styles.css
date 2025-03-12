@@ -101,7 +101,7 @@
 /* Responsive Breakpoints */
 @media (max-width: 1200px) {
     .logo-container {
-        margin-left: calc(-1vw - 500px);
+        margin-left: calc(-1vw - 600px);
         gap: calc(0.8vw + 8px);
     }
 }
