@@ -43,7 +43,7 @@
 .logo-container {
     display: flex;
     align-items: center;
-    gap: -30;  /* Controls space between image and text container */
+    gap: -90;  /* Controls space between image and text container */
     margin-left: calc(-4vw - 40px);
     padding-left: 0;
     transition: all 0.3s ease;
