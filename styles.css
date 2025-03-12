@@ -198,18 +198,19 @@
 
 .main-title {
     text-align: center;
-    color: var(--text-color);
     font-size: 48px;
     font-weight: 700;
-    margin-bottom: 32px;
+    color: var(--text-color);
+    margin: 32px auto;
+    padding: 0 20px;
+    max-width: 1200px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    text-align: center;
 }
 
 @media (max-width: 768px) {
     .main-title {
         font-size: 32px;
-        margin-bottom: 24px;
+        margin: 24px auto;
     }
 }
