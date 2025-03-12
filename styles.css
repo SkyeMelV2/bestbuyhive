@@ -103,7 +103,7 @@
 
 .logo-image {
     width: 500px;
-    height: 70px; /* Reduced from 100px to 70px */
+    height: 100px;
     object-fit: contain;
     border-radius: 0px;
     background: var(--accent-color);
