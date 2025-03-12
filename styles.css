@@ -1,3 +1,19 @@
+:root {
+    --primary-color: #000000;
+    --accent-color: #d4af37;
+    --text-color: #ffffff;
+    --border-color: #ffffff;
+}
+
+body.dark-theme {
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
 /* Hero Section */
 .hero {
     display: flex;
@@ -60,6 +76,16 @@
     margin-left: calc(-4vw - 120px);
     padding-left: 0;
     transition: all 0.3s ease;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: var(--primary-color);
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    justify-content: center;
+    gap: 20px;
 }
 
 .logo {
@@ -102,7 +128,7 @@
 }
 
 .logo-image {
-    width: 500px;
+    width: 100px;
     height: 100px;
     object-fit: contain;
     border-radius: 0px;
@@ -220,4 +246,20 @@
     white-space: nowrap;  /* Keep on one line */
     width: 100%;          /* Take full width */
     font-size: clamp(16px, 4vw, 48px);  /* Fluid typography */
+}
+
+.controls {
+    position: fixed;
+    top: 140px;
+    left: 0;
+    right: 0;
+    background-color: var(--primary-color);
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 999;
+}
+
+.main-container {
+    margin-top: 220px;
+    padding: 20px;
 }
