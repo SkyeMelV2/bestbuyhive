@@ -89,7 +89,7 @@
 }
 
 .logo-image {
-    width: 400px;
+    width: 500px;
     height: 100px;
     object-fit: contain;
     border-radius: 4px;
@@ -101,7 +101,7 @@
 /* Responsive Breakpoints */
 @media (max-width: 1200px) {
     .logo-container {
-        margin-left: calc(-2vw - 350px);
+        margin-left: calc(-2vw - 500px);
         gap: calc(0.8vw + 8px);
     }
 }
