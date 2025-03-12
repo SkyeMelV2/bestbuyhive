@@ -90,11 +90,11 @@
 
 .logo-image {
     width: 350px;
-    height: 100px;
+    height: 50px;
     object-fit: contain;
     border-radius: 4px;
     background: var(--accent-color);
-    padding: 8px;
+    padding: 4px;
     border: 1px solid var(--border-color);
 }
 
