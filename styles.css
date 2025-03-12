@@ -223,7 +223,7 @@
 
 @media (max-width: 768px) {
     .main-title {
-        font-size: 32px;
+        font-size: 25px;
         margin: 6px auto;  /* Reduced from 24px for mobile */
     }
 }
