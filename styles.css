@@ -89,8 +89,8 @@
 }
 
 .logo-image {
-    width: 350px;
-    height: 50px;
+    width: 400px;
+    height: 100px;
     object-fit: contain;
     border-radius: 4px;
     background: var(--accent-color);
