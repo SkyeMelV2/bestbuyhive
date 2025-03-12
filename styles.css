@@ -211,7 +211,7 @@
 
 .main-title {
     text-align: center;
-    font-size: 38px;
+    font-size: 30px;
     font-weight: 700;
     color: var(--text-color);
     margin: -400px auto;    /* Reduced from 32px to move title higher */
