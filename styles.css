@@ -114,11 +114,13 @@
 /* Navigation Styles */
 .nav {
     display: flex;
-    justify-content: center;  /* Center items horizontally */
-    align-items: center;     /* Center items vertically */
-    gap: 48px;              /* Space between nav items */
-    flex: 1;                /* Take up available space */
-    margin: 0 auto;         /* Center the nav container */
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+    flex: 1;
+    margin: -25px auto 0;  /* Negative top margin to move up */
+    position: relative;    /* Enable positioning */
+    z-index: 2;           /* Ensure nav stays above other elements */
 }
 
 .nav a {
@@ -139,6 +141,15 @@
 .nav a:hover {
     color: var(--accent-color);
     transform: translateY(-2px);
+}
+
+/* Update header to accommodate new nav position */
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    position: relative;
 }
 
 /* Responsive Breakpoints */
@@ -189,6 +200,7 @@
     }
 
     .nav {
+        margin-top: -20px;  /* Slightly less negative margin on mobile */
         gap: 24px;
         padding: 16px 0;
     }
@@ -207,6 +219,11 @@
 
 @media (max-width: 480px) {
     .logo-container { gap: calc(0.3vw + 3px); }
+
+    .nav {
+        margin-top: -15px;  /* Even less negative margin on smaller screens */
+        gap: 16px;
+    }
 }
 
 .main-title {
