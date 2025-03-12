@@ -114,13 +114,11 @@
 /* Navigation Styles */
 .nav {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 48px;
-    flex: 1;
-    margin-top: -65px;  /* Move nav up while keeping other elements in place */
-    position: relative;
-    z-index: 2;
+    justify-content: center;  /* Center items horizontally */
+    align-items: center;     /* Center items vertically */
+    gap: 48px;              /* Space between nav items */
+    flex: 1;                /* Take up available space */
+    margin: 0 auto;         /* Center the nav container */
 }
 
 .nav a {
@@ -191,7 +189,6 @@
     }
 
     .nav {
-        margin-top: -45px;  /* Adjust for mobile */
         gap: 24px;
         padding: 16px 0;
     }
@@ -210,11 +207,6 @@
 
 @media (max-width: 480px) {
     .logo-container { gap: calc(0.3vw + 3px); }
-
-    .nav {
-        margin-top: -35px;  /* Further adjust for smaller screens */
-        gap: 16px;
-    }
 }
 
 .main-title {
