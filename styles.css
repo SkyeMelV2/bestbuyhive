@@ -213,7 +213,7 @@
     text-align: center;
     font-weight: 700;
     color: var(--text-color);
-    margin: 2px auto;
+    margin: -100px auto;
     padding: 0 20px;
     text-transform: uppercase;
     letter-spacing: 2px;
