@@ -44,7 +44,7 @@
     display: flex;
     align-items: center;
     gap: -110;  /* Controls space between image and text container */
-    margin-left: calc(-4vw - 40px);
+    margin-left: calc(-4vw - 110px);
     padding-left: 0;
     transition: all 0.3s ease;
 }
@@ -92,7 +92,7 @@
     width: 500px;
     height: 100px;
     object-fit: contain;
-    border-radius: 4px;
+    border-radius: 0px;
     background: var(--accent-color);
     padding: 4px;
     border: 1px solid var(--border-color);
