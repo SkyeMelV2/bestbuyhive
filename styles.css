@@ -103,7 +103,7 @@
 
 .logo-image {
     width: 500px;
-    height: 100px;
+    height: 70px; /* Reduced from 100px to 70px */
     object-fit: contain;
     border-radius: 0px;
     background: var(--accent-color);
@@ -187,7 +187,7 @@
     
     .logo-image {
         width: 100px;
-        height: 30px;
+        height: 50px;
     }
 
     .nav {
